@@ -1,0 +1,56 @@
+<ion-view ng-init="textcard = 'Booking'">
+<ion-nav-title>Contact Us
+   </ion-nav-title>
+
+<ion-content>
+<div class="card" style="height:100%;">
+  <div class="item item-divider" style="background-color:#e5efd0;">
+    What can we help you with?
+  </div>
+  <div class="item item-text-wrap" >
+    <label class="item item-input item-select">
+    <div class="input-label" style="font-size:14px; padding:7px 7px 13px 0px; width:50%; ">
+     Select Your issues
+    </div>
+    <select ng-model="textcard">
+      <option>Booking</option>
+      <option>Other Issues</option>
+    </select>
+  </label>
+</div>
+	<div class="card" ng-if="textcard== 'Booking'">
+	  <div class="item item-divider">
+	    Booking
+	  </div>
+<div class="list">
+
+    <a class="item item-thumbnail-left" href="#">
+      <img src="cover.jpg">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+    </a>
+
+</div>
+
+	</div>
+	<div class="card" ng-if="textcard== 'Other Issues'">
+	  <div class="item item-divider" >
+	    How do you want to contact us?
+	  </div>
+          <a href="tel: +9021820682"><button class="btn btn-primary"style="margin:50px; height:48px;">
+            <i class="icon ion-android-call"></i>
+            Contact</button>
+          </a>	
+    		<a ng-href="mailto: info@digitalfives.com" target="_blank"><button class="btn btn-primary" style="height:48px; margin:-12px;">
+    		<i class="icon ion-android-mail"></i>
+    		Compose</button>
+    	  </a>
+
+    </div>
+</div>
+
+	</div>
+ </div>
+
+</ion-content>
+</ion-view>

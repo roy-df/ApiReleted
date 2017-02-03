@@ -1,0 +1,82 @@
+<ion-model-view >
+    <ion-content padding="'true'" scroll="false" class="has-header">
+        <form class="list" data-ng-submit="adduser(userinfo,registerfrm.$valid)" name="registerfrm" id="registerform" novalidate>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">First Name*</span>
+                    <input type="text" placeholder="" data-ng-model="userinfo.firstname" name= "firstname" required>
+                     
+                </label>
+                <span>
+                     <div data-ng-messages="registerfrm.$submitted && registerfrm.firstname.$error" role="alert" class="error_msg">
+                        <div id="reqmassgclor" data-ng-message="required">Enter first name</div>
+                     </div>
+                  </span>
+            
+                <label class="item item-input">
+                    <span class="input-label">Last Name*</span>
+                    <input type="text" placeholder="" data-ng-model="userinfo.lastname" name="lastname" required>
+                </label>
+                <span>
+                     <div data-ng-messages="registerfrm.$submitted && registerfrm.lastname.$error" role="alert" class="error_msg">
+                        <div id="reqmassgclor" data-ng-message="required">Enter last name</div>
+                     </div>
+                  </span>
+            
+                <label class="item item-input">
+                    <span class="input-label">Email*</span>
+                    <input type="email" placeholder="" data-ng-model="userinfo.email" name="email" required>
+                </label>
+                <span>
+                     <div data-ng-messages="registerfrm.$submitted && registerfrm.email.$error" role="alert" class="error_msg">
+                        <div id="reqmassgclor" data-ng-message="required">Enter email </div>
+                     </div>
+                  </span>
+            
+                <label class="item item-input">
+                    <span class="input-label">Password*</span>
+                    <input type="password" placeholder="" data-ng-model="userinfo.password" name="password" required>
+                </label>
+                <span>
+                     <div data-ng-messages="registerfrm.$submitted && registerfrm.password.$error" role="alert" class="error_msg">
+                        <div id="reqmassgclor" data-ng-message="required">Enter password </div>
+                     </div>
+                  </span>
+            
+               
+                <label class="item item-input">
+                    <span class="input-label">Re-Password*</span>
+                    <input type="password" placeholder="" data-ng-model="userinfo.repassword" name="repassword" required>
+                </label>
+                <span>
+                     <div data-ng-messages="registerfrm.$submitted && registerfrm.repassword.$error" role="alert" class="error_msg">
+                        <div id="reqmassgclor" data-ng-message="required">Enter Re-password </div>
+                     </div>
+                  </span>
+            
+                <label class="item item-input">
+                    <span class="input-label">Mobile*</span>
+                    <input type="number" placeholder="" data-ng-model="userinfo.mobile" name="mobile" required>
+                </label>
+                <span>
+                     <div data-ng-messages="registerfrm.$submitted && registerfrm.mobile.$error" role="alert" class="error_msg">
+                        <div id="reqmassgclor" data-ng-message="required">Enter mobile number </div>
+                     </div>
+                  </span>
+                <label class="item item-input">
+                <span class="input-label">Date of birth*</span>
+                <input type="date" placeholder="" data-ng-model="userinfo.birthdate" name="birthdate" required>
+            </label>
+            <span>
+                     <div data-ng-messages="registerfrm.$submitted && registerfrm.birthdate.$error" role="alert" class="error_msg">
+                        <div id="reqmassgclor" data-ng-message="required">Enter birth date </div>
+                     </div>
+                  </span>
+            
+            
+            </ion-list>
+            <button style="margin-top:36px;" ng-click="signup(data)" class="button button-positive button-block " >Sign up</button>
+        
+            </form>
+    </ion-content>
+</ion-model-view>

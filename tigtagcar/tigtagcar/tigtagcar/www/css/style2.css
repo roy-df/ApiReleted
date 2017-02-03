@@ -1,0 +1,380 @@
+#details-div{
+   background-color: #FDFEFE;
+     width: 100%;
+     height: 55%;
+}
+  h3,.h3{
+ margin-bottom: 0px;	
+ } 
+  
+  h4,.h4{
+  	padding-left:30px;
+    font-size: 15px;
+  }
+
+#total-fare-div{
+background-color:#C0C0C0;
+ 
+}
+#input-card-number{
+    width:100%;
+    margin-left:2.5%;
+    margin-right:1%;
+    background-color: #C0C0C0;
+  
+}
+
+
+.button.button-block, .button.button-full {
+    /* margin-top: 10px; */
+    margin-top: 0px;
+}
+
+.bar-footer {
+    bottom: 0px;
+    height:12%;
+
+}
+ .footer-cartimg{
+      padding-top:10px;
+      color: ;
+ }
+#payment-details{
+	width: 100%;
+	height: 50%;
+}
+
+.footer-color{
+  background-color:#5c7e0e;
+}
+
+.slide-tab{
+	height: 70%;
+	width: 100%;
+}
+
+.error-msg{
+  width: 100%;
+}
+
+.circle {
+    background-color:black;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    width: 0px!important;
+    height: 0px;
+    color: #fff;
+    min-width:24px;
+    min-height: 24px;
+
+
+
+
+}
+.circle i {
+    position: absolute;
+    margin: auto;
+    top:3px;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    line-height: 0px;
+  }
+
+  .item-menu{
+     background-color:white;
+     margin: 0px;
+    border-style:none;
+    padding:0px;
+  }
+
+  .header-side{
+    height: 80px;
+  }
+
+  .leftmenu-list{
+    padding-top: 50px;
+  }
+
+  .item-avatar{
+    width: 100%;
+    border-style: none;
+  }
+
+ 
+  .col-rate{
+  padding:1px;
+  height: 51px;
+  background-color:#b8f1c8;
+  border: 2px solid #5c7e0e;
+  font-size:10px;
+  color:black;
+  text-align: center;
+  border: solid 1px #555; 
+   border-radius:8px;
+
+  
+
+  }
+
+  .book-now{
+     text-align:center;
+     padding-top:0px;
+     background-color: #5c7e0e;
+     font-size:10px;
+     border: solid 1px #555; 
+    border-radius:8px;
+
+  }
+
+  #rate-div{
+     color:white;
+    margin-left: 4px;
+   margin-right: 5px; 
+    width:99%;
+   }
+
+  #editdate-div{
+    padding-top: 155px;
+  }
+
+  .sel{
+    background-color: orange;
+    border: 1px solid #5c7e0e;
+}
+
+
+td { border: 1px solid #5c7e0e;
+    
+     text-align: center;
+ }
+
+ .input-label{
+  color: #5c7e0e;
+  opacity:1.3;
+ }
+#reqmassgclor{
+  color: red;
+}
+
+.mybookingdiv{ width: 50%; height: 38%; float: left; }
+#div1 { background: #DDD;
+        border-style:solid;
+        border-color:#5c7e0e;
+        border-right-width:1px;
+        border-bottom-width:1px;
+        font-size:23px; }
+
+#div2 { background: #DDD;
+        border-style:solid;
+        border-color:#5c7e0e;
+        border-bottom-width:1px;
+        font-size:23px;}
+
+#div3 { background: #DDD;
+        border-style:solid;
+        border-color:#5c7e0e;
+        border-right-width:1px;
+        font-size:23px; }
+
+#div4 { background: #DDD;
+        border-style:solid;
+        border-color:#5c7e0e;
+        border-width:0px; 
+        font-size:23px;}
+
+#div5 { background: #DDD;
+        height:24%;
+        width: 100%;
+        float: left;
+        border-style:solid;
+        border-color:#5c7e0e;
+        border-width:0px;
+        font-size:23px;}
+
+
+/*html,
+body{
+  height:100%;
+  overflow:hidden;
+}
+
+body{
+  background:rgba(52, 152, 219, 0.5);
+  background: -webkit-linear-gradient(top, rgba(52, 152, 219, 0.5) 60%,rgba(250, 252, 219, 0.5) 100%);
+  background: -moz-linear-gradient(top, rgba(52, 152, 219, 0.5) 60%,rgba(250, 252, 219, 0.5) 100%);
+}
+*/
+.car,
+.car:before,
+.car:after{
+  position:absolute;
+}
+
+.car{
+  background:rgb(230, 126, 34);
+  border-radius:100%;
+  box-shadow:
+    
+     /* ruedas */
+    
+    5px 12px 0 5px rgb(189, 195, 199), /* izquierda */
+    30px 11px 0 5px rgb(189, 195, 199),
+    5px 12px 0 8px rgb(52, 73, 94), /* izquierda */
+    30px 11px 0 8px rgb(52, 73, 94),
+    
+    /* ventana */
+    
+    14px -11px 0 5px rgb(236, 240, 241),
+    27px -11px 0 5px rgb(236, 240, 241),
+    
+    /* chasis */
+    
+    0 -1px 0 10px rgb(230, 126, 34),
+    5px -1px 0 10px rgb(230, 126, 34),
+    10px -1px 0 10px rgb(230, 126, 34),
+    15px -1px 0 10px rgb(230, 126, 34),
+    20px -1px 0 10px rgb(230, 126, 34),
+    25px -1px 0 10px rgb(230, 126, 34),
+    30px -1px 0 10px rgb(230, 126, 34),
+    
+    /* techo */
+    
+    15px -11px 0 10px rgb(230, 126, 34),
+    20px -11px 0 10px rgb(230, 126, 34),
+    26px -11px 0 10px rgb(230, 126, 34);
+  
+  /* El width y el height del div deben ser inferiores al tamaño total del box-shadow, de esa manera controlaremos distintas variantes de tamaños.*/
+  
+  width:2px; height:2px;
+  left:50%; top:28%;
+  margin-left:-15px; margin-top:-40px;
+  animation:simulacion 1s linear infinite;
+}
+
+@keyframes simulacion{
+  25%, 75%{
+  box-shadow:
+    
+     /* ruedas */
+    
+    5px 7px 0 5px rgb(189, 195, 199), /* izquierda */
+    30px 8px 0 5px rgb(189, 195, 199),
+    5px 7px 0 8px rgb(52, 73, 94), /* izquierda */
+    30px 8px 0 8px rgb(52, 73, 94),
+    
+    /* ventana */
+    
+    14px -9px 0 5px rgb(236, 240, 241),
+    27px -9px 0 5px rgb(236, 240, 241),
+    
+    /* chasis */
+    
+    0 1px 0 10px rgb(230, 126, 34),
+    5px 1px 0 10px rgb(230, 126, 34),
+    10px 1px 0 10px rgb(230, 126, 34),
+    15px 1px 0 10px rgb(230, 126, 34),
+    20px 1px 0 10px rgb(230, 126, 34),
+    25px 1px 0 10px rgb(230, 126, 34),
+    30px 1px 0 10px rgb(230, 126, 34),
+    
+    /* techo */
+    
+    15px -9px 0 10px rgb(230, 126, 34),
+    20px -9px 0 10px rgb(230, 126, 34),
+    26px -9px 0 10px rgb(230, 126, 34);    
+  }
+  50%, 100%{
+   box-shadow:
+    
+     /* ruedas */
+    
+    5px 12px 0 5px rgb(189, 195, 199), /* izquierda */
+    30px 11px 0 5px rgb(189, 195, 199),
+    5px 12px 0 8px rgb(52, 73, 94), /* izquierda */
+    30px 11px 0 8px rgb(52, 73, 94),
+    
+    /* ventana */
+    
+    14px -11px 0 5px rgb(236, 240, 241),
+    27px -11px 0 5px rgb(236, 240, 241),
+    
+    /* chasis */
+    
+    0 -1px 0 10px rgb(230, 126, 34),
+    5px -1px 0 10px rgb(230, 126, 34),
+    10px -1px 0 10px rgb(230, 126, 34),
+    15px -1px 0 10px rgb(230, 126, 34),
+    20px -1px 0 10px rgb(230, 126, 34),
+    25px -1px 0 10px rgb(230, 126, 34),
+    30px -1px 0 10px rgb(230, 126, 34),
+    
+    /* techo */
+    
+    15px -11px 0 10px rgb(230, 126, 34),
+    20px -11px 0 10px rgb(230, 126, 34),
+    26px -11px 0 10px rgb(230, 126, 34);   
+  }
+}
+
+.car:before,
+.car:after{
+  content:"";
+}
+
+.car:before{
+  background:rgba(236, 240, 241, 0);
+  border-radius:100%;
+  box-shadow:
+    
+    /* nubes */
+    
+    -80px 60px 10px 5px rgba(236, 240, 241, 0.5),
+    -60px 50px 10px 10px rgba(236, 240, 241, 0.5),
+    -30px 60px 10px 15px rgba(236, 240, 241, 0.9),
+    -10px 60px 10px 20px rgba(255, 255, 255, 0.8),
+    
+    110px 50px 10px 5px rgba(236, 240, 241, 0.5),
+    90px 60px 10px 10px rgba(236, 245, 245, 0.8),
+    70px 50px 10px 15px rgba(236, 240, 241, 0.5),
+    50px 60px 10px 20px rgba(236, 240, 241, 0.8);
+  
+  width:1px; height:1px;
+  left:50%; top:30%;
+  animation:nubes 2s linear infinite;
+}
+
+@keyframes nubes{
+  50%{
+      box-shadow:
+    
+    /* nubes */
+    
+    -82px 59px 8px 5px rgba(255, 255, 255, 0.5),
+    -63px 52px 12px 10px rgba(236, 240, 241, 0.5),
+    -35px 63px 10px 15px rgba(236, 240, 241, 0.9),
+    -8px 58px 10px 20px rgba(255, 255, 255, 0.8),
+    
+    112px 46px 10px 5px rgba(236, 240, 241, 0.5),
+    93px 58px 10px 10px rgba(255, 255, 255, 0.8),
+    68px 52px 10px 15px rgba(236, 240, 241, 0.5),
+    52px 61px 10px 20px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.car:after{
+  background:rgb(46, 204, 113);
+  border-radius:100%;
+  box-shadow:1px 0px 20px 1px rgba(255, 255, 255, 0.3);
+  width:82px; height:78px;
+  left:50%; top:50%;
+  margin-top:17px; margin-left:-25px;
+  animation:rotar 1s linear infinite;
+}
+
+@keyframes rotar{
+  100%{
+    transform:rotateZ(360deg);
+  }
+}
+

@@ -1,0 +1,66 @@
+<ion-modal-view>
+    <ion-content padding="'true'" scroll="false" class="has-header" ng-init="Login_init()">
+        <form data-ng-submit="loginfrm.$valid && doLogin(logininfo,loginfrm.$valid)" name="loginfrm" novalidate class="list">
+            <ion-list>
+                <div style="padding-top: 97px;">
+                    <label class="item item-input">
+                        <span class="input-label">
+                            Username
+                        </span>
+                        <input type="email" data-ng-model="logininfo.userEmail" name="username" ng-pattern='/^(([^ </>()[\]\.,;:\s@\"]+(\.[^ <> ()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^ <> ()[\]\.,;:\s@\"]{2,})$/i' required>
+                        </label>
+                        <span>
+                            <div data-ng-messages="loginfrm.$submitted && loginfrm.username.$error" role="alert" class="error_msg">
+                                <div id="reqmassgclor" data-ng-message="required">
+                                    Enter User name
+                                </div>
+                                <div id="reqmassgclor" data-ng-message="email || pattern">
+                                    Enter Valid User name
+                                </div>
+                            </div>
+                        </span>
+                        <label class="item item-input">
+                            <span class="input-label">
+                                Password
+                            </span>
+                            <input type="password" data-ng-model="logininfo.password" name="password" required/>
+                        </label>
+                        <!--         <label class="item text-center">
+                          <h2 ng-click="gotoRegister()">  Register! </h2>
+                        </label> -->
+                        <span>
+                            <div data-ng-messages="loginfrm.$submitted && loginfrm.password.$error" role="alert" class="error_msg">
+                                <div id="reqmassgclor" data-ng-message="required">
+                                    Enter password
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                    <span>
+                        <div role="alert" class="error_msg" ng-if="errMsgLogin">
+                            <div id="reqmassgclor">
+                                {{ errMsgLogin }}
+                            </div>
+                        </div>
+                    </span>
+                </ion-list>
+                <button style="margin-top:36px;" class="button button-block button-positive" type="submit">
+                    Log in
+                </button>
+                <button style="margin-top:36px; background-color:#c9d3e8;" class="button button-block " type="submit" ui-sref="app.register">
+                    Sign Up
+                </button>
+            </form>
+            <div>
+                <div class="button-bar" style=" padding-top:45px;">
+                    <button style="background-color:#3B5998; color:white;" class="button icon-left ion-social-facebook " ng-click="facebookLogin()">
+                        Facebook
+                    </button>
+                    <button class="button icon-left ion-social-googleplus button-assertive" ng-click="googleLogin()">
+                        Google+
+                    </button>
+                </div>
+                <div>
+                </div>
+            </ion-content>
+        </ion-modal-view>

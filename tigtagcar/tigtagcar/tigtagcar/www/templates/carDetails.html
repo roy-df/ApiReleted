@@ -1,0 +1,78 @@
+<ion-view class="background-image" >
+  <ion-nav-title >
+      <img alt="Company Logo" height="45" ng-src="img/tigtagcar-logo.png">
+  </ion-nav-title>
+  <ion-content class="cardetails" scroll="false" ng-init="init();getCarBookingDetails();">
+  <div class="row carside1" style="position: absolute;max-height: 196px; height:196px;">
+    <div class="col col-offset-50 set1" >
+      <h4 style="text-align : center;">{{carDetails.car_Carname}}</h4>
+      <h5>-{{carDetails.car_CarId}}</h5>
+      <h5>-{{carDetails.car_CarNumber}}</h5>
+      <h5>-{{carDetails.car_Cartype}}</h5>
+      <h5>-{{carDetails.car_Seating}} seater</h5>
+      <h5>-{{carDetails.car_Mileage}}km/L-{{carDetails.fuealtype}}</h5>
+      <!-- <h5>- Air Bags (incl.)</h5>
+      <h5>- Fuel (incl.)</h5>
+     --></div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img class="full-image" ng-src="{{imageURL}}{{carDetails.car_CarNumber}}.jpg" style="max-height: 201px;">
+    </div>
+  </div>
+<div class="row" id="calendar-div">
+    <div class="col" style="text-align: center;" ><h5>{{ BookingDetails.startdatedisplay | date : 'EEE'}}&nbsp; {{ BookingDetails.startdatedisplay | date}}</h5><h5>{{ BookingDetails.selectedstartTime | date:'h:mma' : 'UTC' }}</h5></div>
+    <div class="col-10" style="color: white;margin: 16px 0px 0px 0px;"><i class ="icon ion-arrow-right-a calenLogo" style="font-size: 30px;"></i></div>
+    <div class="col" style="text-align: center;" ><h5>{{ BookingDetails.enddatedisplay | date : 'EEE'}}&nbsp;{{ BookingDetails.enddatedisplay | date}}</h5><h5>{{ BookingDetails.selectedendTime | date:'h:mma' : 'UTC' }}</h5></div>
+  </div>
+  <div class="item item-divider" id="total-fare-div">
+    <h3>Total Fare</h3>
+  </div>
+  <div class="row" id="details-div">
+  <!-- <div class="col col-75" > 
+    <h4>Tariff</h4>
+    <h4>Service Tax</h4>
+    <h4>Per KM</h4>
+    <h4>Minimum Distance</h4>
+    <h4 style="color:#5c7e0e;">Amount Payable</h4>
+  </div>
+   <div class="col  ">
+    <h4>:{{selectedPackage.packgePrice}}</h4>
+    <h4>: 12.4%</h4>
+    <h4>: Rs. 25</h4>
+    <h4>: 200 kms</h4>
+    <h4 style="color:#5c7e0e;">: Rs. 1475</h4>
+   </div>
+   --> 
+   <table style="table-layout:fixed; margin-top:2px;" width="100%">
+  <tr>
+    <td ><h4>Name</h4></td>
+    <td><h4>Amount</h4></td>
+
+  
+  </tr>
+  <tr>
+    <td style="background-color:#eae5e5;">Tariff</td>
+    <td style="background-color:#f0f5e5;"><h4>{{selectedPackage.packgePrice}}</h4></td>
+  </tr>
+  <tr>
+    <td style="background-color:#eae5e5;">Service Tax</td>
+    <td style="background-color:#f0f5e5;"><h4>{{selectedPackage.packgetax}}</h4></td>
+  </tr>
+  <tr>
+    <td style="background-color:#eae5e5;"><h3>TOTAL</h3></td>
+    <td style="background-color:#f0f5e5;"><h3>Rs.{{selectedPackage.packgetotal | number:2}}</h3></h3></td>
+  </tr>
+  <tr><td><input type="number"  placeholder="enter Extra km" ng-model="extrakm" ng-change="changeExtra(extrakm)"></td></tr>
+
+</table>
+
+  </div>
+  </ion-content>
+  <div class="bar bar-footer footer-color" ng-click="showPayment(carDetails._id)">
+  <div class="title footer-cartimg" >
+  <img src="img/commerce.png" class="">
+   CHECKOUT
+   </div> 
+</div>
+</ion-view>

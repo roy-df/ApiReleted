@@ -1,0 +1,47 @@
+<ion-view>
+  <ion-nav-title >
+      <img alt="Company Logo" height="45" ng-src="img/tigtagcar-logo.png">
+  </ion-nav-title>
+  <ion-content class="carList">
+  <div ng-repeat="car in carlist | filter:car.car_Cartype='muv'" >
+    <div class="row carside" style="position: absolute;">
+    <div class="col col-50">
+      <h4 style="text-align :left; font-size: 18px; color:#006400;">{{car.car_Carname | limitTo:18}}..</h4>
+    </div>
+    
+    <div class="col col-50 set" style="padding: 17px 5px 0px 5px; height:203px;" >
+         <h5>-{{car.car_CarId}}</h5>
+      <h5>-{{car.car_CarNumber}}</h5>
+      <h5>-{{car.car_Cartype}}</h5>
+      <h5>-{{car.car_Seating}} seater</h5>
+      <!-- <h5>{{car.fuealtype}}</h5>
+   -->    <h5>-{{car.car_Mileage}}km/L-{{car.fuealtype}}</h5>
+       
+    </div>
+
+  </div>
+     
+  <div class="row">
+    <div class="col" style="max-height:210px; z-index:-1; padding-top:35px; width:90%;">
+  
+      <img class="full-image" ng-src="{{imageURL}}{{car.car_CarNumber}}.jpg" style="max-height: 202px;">
+    </div>
+  </div>
+
+<div class="row " id="rate-div">
+  <div class="col col-rate " ng-repeat="section in sections" style=" color:#;" ng-class=" {sel: (section == selectedas && (carCarId==car.car_CarId))}" ng-click="isSelected(section, car.car_CarId)">
+     <h6 style="margin-top:2px; margin-bottom:5px;">Rs.280</h6>
+     <h6>40 KMS FREE</h6>
+ 
+  </div>
+  
+  <div class="col col-rate book-now" ng-click="showDetail(car)">
+     <button class="button button-block button-positive book-now">
+     BOOK Now
+</button>
+
+  </div>
+</div>
+  </div>
+  </ion-content>
+</ion-view>

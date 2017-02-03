@@ -1,0 +1,134 @@
+<div class="container_margin" ng-controller="addcar" style="background-color:#5c7e0e">
+   <form data-ng-submit="addcar(carinfo,databasefrm.$valid)" name="databasefrm" id="databaseform" novalidate>
+   <fieldset>
+      <div class="col-10">    
+         <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <h2 for="login">DATABASE FORM</h2>
+            </div>
+         </div>
+         
+         <!-- <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <input type="file" file-change="handler($event,files)" ng-model="MyFiles" />
+            </div>
+         </div>  -->
+
+         <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <input type="text" class="field" placeholder="Enter CAR Name" data-ng-model="carinfo.car_Carname" name= "Carname" required>
+               <span>
+                     <div data-ng-messages="databasefrm.$submitted && databasefrm.Carname.$error" role="alert" class="error_msg">
+                        <div data-ng-message="required">Please Enter CAR Name</div>
+                     </div>
+                  </span>
+            </div>
+         </div> 
+            <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <input type="text" class="field" placeholder="Enter  CAR ID" data-ng-model="carinfo.car_CarId" name= "Id" required>
+               <span>
+                     <div data-ng-messages="databasefrm.$submitted && databasefrm.Seating.$error" role="alert" class="error_msg">
+                        <div data-ng-message="required">Please Enter  CAR ID</div>
+                     </div>
+                  </span>
+            </div>
+         </div>
+
+         <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <input type="text" class="field" placeholder="Enter  CAR NUMBER" data-ng-model="carinfo.car_CarNumber" name= "CarNumber" required>
+               <span>
+                     <div data-ng-messages="databasefrm.$submitted && databasefrm.Seating.$error" role="alert" class="error_msg">
+                        <div data-ng-message="required">Please Enter  CAR Number</div>
+                     </div>
+                  </span>
+            </div>
+         </div>
+
+  
+         <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <input type="text" class="field" placeholder="Enter  CAR Type" data-ng-model="carinfo.car_Cartype" name= "Cartype" required>
+               <span>
+                     <div data-ng-messages="databasefrm.$submitted && databasefrm.Cartype.$error" role="alert" class="error_msg">
+                        <div data-ng-message="required">Please Enter  CAR Type</div>
+                     </div>
+                  </span>
+            </div>
+         </div>
+
+          <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <input type="number" class="field" placeholder="Enter  CAR Seating Capacity" data-ng-model="carinfo.car_Seating" name= "Seating" required>
+               <span>
+                     <div data-ng-messages="databasefrm.$submitted && databasefrm.Seating.$error" role="alert" class="error_msg">
+                        <div data-ng-message="required">Please Enter  CAR Seating Capacity</div>
+                     </div>
+                  </span>
+            </div>
+         </div>
+
+            <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+                   <label for="fuelradio"> CarFuel Type</label>
+                   <input id="fuelradio" class="field" type="radio" data-ng-model="carinfo.fuealtype" value="petrol">Petrol</input>
+                   <input id="fuelradio" type="radio" data-ng-model="carinfo.fuealtype" value="diesel">Diesel</input>     
+                           </div>
+         </div>    
+
+
+          <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <input type="number" class="field" placeholder="Enter  CAR Mileage(km/L)" data-ng-model="carinfo.car_Mileage" name= "Mileage" required>
+               <span>
+                     <div data-ng-messages="databasefrm.$submitted && databasefrm.Mileage.$error" role="alert" class="error_msg">
+                        <div data-ng-message="required">Please Enter  Mileage(km/L)</div>
+                     </div>
+                  </span>
+            </div>
+
+            
+         </div>
+         <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <input type="number" class="field" placeholder="Enter  CAR Price(km/hour)" data-ng-model="carinfo.car_Mileage" name= "Price" required>
+               <span>
+                     <div data-ng-messages="databasefrm.$submitted && databasefrm.Price.$error" role="alert" class="error_msg">
+                        <div data-ng-message="required">Please Enter  Price(km/hour)</div>
+                     </div>
+                  </span>
+            </div>
+            </div>
+<!--          <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <input type="text" class="field" id="text-input" placeholder="Enter Email Address" data-ng-model="userinfo.user_email" name= "email" data-ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" required>
+               <span>
+                     <div data-ng-messages="signupfrm.$submitted && signupfrm.email.$error" role="alert" class="error_msg">
+                        <div data-ng-message="required">Please Enter Email Address</div>
+                        <div data-ng-message="pattern">Enter Valid Email Address</div>
+                     </div>
+                  </span>
+            </div>
+            
+         </div>
+         <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <input type="password" class="field" id="text-input" name="password"placeholder="Enter Password" data-ng-model="userinfo.user_password" required>
+               <span ng-if="signupfrm.$submitted">
+                     <div data-ng-messages="signupfrm.$submitted && signupfrm.password.$error" role="alert" class="error_msg">
+                        <div data-ng-message="required">Please Enter Password</div>
+                     </div>
+                  </span>
+            </div>
+         </div> -->
+         <div class="field-group clear row"> 
+            <div class="col-5 push-5">
+               <button class="field" >SUBMIT</button>
+               <div ng-model="signupmsg" ng-show="showsignmsg" class="success_msg">{{signupmsg}}</div>
+            </div>
+         </div>
+      </div>   
+   </fieldset>
+   </form>
+</div>

@@ -1,0 +1,219 @@
+<ion-view class="background-image" ng-controller="carController" ng-init="init();getCarBookingDetails();getCities();getYearMonthList()">
+  <ion-nav-title >
+      <img alt="Company Logo" height="45" ng-src="img/tigtagcar-logo.png">
+  </ion-nav-title>
+  <ion-content class="cardetails" class="has-header" overflow-scroll="false" scroll="false">
+  <div class="row carside1" style="position: absolute;max-height: 196px; height:196px;">
+    <div class="col col-offset-50 set1" >
+       <h4 style="text-align : center;">{{carDetails.car_Carname}}</h4>
+      <h5>-{{carDetails.car_CarId}}</h5>
+      <h5>-{{carDetails.car_CarNumber}}</h5>
+      <h5>-{{carDetails.car_Cartype}}</h5>
+      <h5>-{{carDetails.car_Seating}} seater</h5>
+      <h5>-{{carDetails.car_Mileage}}km/L-{{carDetails.fuealtype}}</h5>
+     </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img class="full-image" ng-src="{{imageURL}}{{carDetails.car_CarNumber}}.jpg" style="max-height: 196px;">
+    </div>
+  </div>
+  <div class="row" id="calendar-div">
+    <div class="col" style="text-align: center;" ><h5>{{ BookingDetails.startdatedisplay | date : 'EEE'}}&nbsp; {{ BookingDetails.startdatedisplay | date}}</h5><h5>{{ BookingDetails.selectedstartTime | date:'h:mma' : 'UTC' }}</h5></div>
+    <div class="col-10" style="color: white;margin: 16px 0px 0px 0px;"><i class ="icon ion-arrow-right-a calenLogo" style="font-size: 30px;"></i></div>
+    <div class="col" style="text-align: center;" ><h5>{{ BookingDetails.enddatedisplay | date : 'EEE'}}&nbsp;{{ BookingDetails.enddatedisplay | date}}</h5><h5>{{ BookingDetails.selectedendTime | date:'h:mma' : 'UTC' }}</h5></div>
+  </div>
+<!-- <div class="row" id="calendar-div">
+    <div class="col col-20" ><img src="img/calendar-line.png" class="calenLogo" align="center">
+    </div>
+    <div class="col" ><h5> {{ BookingDetails.startdatedisplay | date}}</h5><h5>{{ BookingDetails.startdatedisplay | date : 'EEEE'}}</h5><h5>{{ BookingDetails.selectedstartTime | date:'h:mma' : 'UTC' }}</h5></div>
+    <div class="col col-20"><img src="img/arrow-right.png" class="calenLogo" align="left"></div>
+    <div class="col" ><h5> {{ BookingDetails.enddatedisplay | date}}</h5><h5>{{ BookingDetails.enddatedisplay | date : 'EEEE'}}</h5><h5>{{ BookingDetails.selectedendTime | date:'h:mma' : 'UTC' }}</h5></div>
+  </div> -->
+  <div class="item item-divider" id="total-fare-div">
+    Choose a Payment Method
+  </div>
+  <div>
+    <ion-slide-box slide-tabs-scrollable="false" show-pager='false' style="background : white;" does-continue="false" ion-slide-tabs on-slide-changed="slideHasChanged($index)"> 
+      <ion-slide ion-slide-tab-label='<span>Credit Card</span>' >
+        <article class="tab-content new_tabs" style="min-height: 300px">
+          <div class="row">
+            <div class="col">
+              <label class="item item-input">
+              <i class="icon ion-card placeholder-icon"></i>
+              <input type="number" ng-model="CCdata.CardNoCC" placeholder="Card Number">
+              </label>
+            </div>
+          </div>  
+          <div class="row">
+              <div class="col item item-input">
+                <select name="expirmonth" ng-model="CCdata.expMonthCC" placeholder="Expiry Month" style=" padding: 11px; width: 100%; border: none;background: none;" required>
+                <option value="" selected>Expiry Month</option>
+                <option ng-repeat="o in monthlist" value="{{o}}">
+                {{o}}
+                </option>
+                </select>
+              </div>
+              <div class="col item item-input">
+                <select name="expiryear" ng-model="CCdata.expYearCC" placeholder="Expiry Year" style=" padding: 11px; width: 100%;background: none; border: none;" required>
+                <option value="" selected>Expiry Year</option>
+                <option ng-repeat="o in yearlist" value="{{o}}">
+                {{o}}
+                </option>
+                </select>
+              </div>
+              <div class="col col-20">
+                <div class="item item-input">
+                  <input type="number" ng-model="CCdata.CvvCC" placeholder="CVV" style="width: 30%;display: inline-block;">
+                </div>
+              </div>
+          </div>
+        </article>
+      </ion-slide>
+      <ion-slide ion-slide-tab-label='<span>Debit Card</span>'>
+        <article class="tab-content new_tabs" style="min-height: 300px">
+           <div class="row">
+            <div class="col">
+              <label class="item item-input">
+              <i class="icon ion-card placeholder-icon"></i>
+              <input type="number" ng-model="data.CardNoDC" placeholder="Card Number">
+              </label>
+            </div>
+          </div>  
+          <div class="row">
+              <div class="col item item-input">
+                <select name="expirmonth" ng-model="data.expMonthDC" placeholder="Expiry Month" style="background: none; padding: 11px; width: 100%; border: none;" required>
+                <option value="" selected>Expiry Month</option>
+                <option ng-repeat="o in monthlist" value="{{o}}">
+                {{o}}
+                </option>
+                </select>
+              </div>
+              <div class="col item item-input">
+                <select name="expiryear" ng-model="data.expYearDC" placeholder="Expiry Year" style="background: none; padding: 11px; width: 100%; border: none;" required>
+                <option value="" selected>Expiry Year</option>
+                <option ng-repeat="o in yearlist" value="{{o}}">
+                {{o}}
+                </option>
+                </select>
+              </div>
+              <div class="col col-20">
+                <div class="item item-input">
+                  <input type="number" placeholder="CVV" ng-model="data.CvvDC" style="width: 30%;display: inline-block;">
+                </div>
+              </div>
+          </div>
+        </article>
+      </ion-slide>
+      <ion-slide ion-slide-tab-label='<span>Net Banking</span>'>
+          <article class="tab-content new_tabs" style="min-height: 300px">
+          <div class="row">
+            <div class="col">
+             <div id="dropdownbox1" class="list">
+              <select ng-model="data.bankName"  ng-options="c.bank for c in banks" ng-change="errmsg()"></select>
+            </div>
+            </div>
+          </div> 
+          </article>
+      </ion-slide>
+    </ion-slide-box>
+</div>
+  </ion-content>
+  <ion-footer-bar align-title="center" style="bottom:0px;height:12%;background-color: #5c7e0e;text-align:center;">
+  <input type="button" ng-if="tabActive===0" on-tap="ProceedPaymentCC()" class="button button-full btn-yellow footerBTN" value="PROCEED" style="color:black;">
+  <input type="button" ng-if="tabActive===1" on-tap="ProceedPaymentDC(data)" class="button button-full btn-yellow footerBTN" value="PROCEED" style="color:black;">
+  <input type="button" ng-if="tabActive===2" on-tap="ProceedPaymentBank(data.bankName)" class="button button-full btn-yellow footerBTN" value="PROCEED" style="color:black;">
+</ion-footer-bar>
+</ion-view>
+
+
+
+<!-- 
+
+
+<ion-content ng-controller="carController"  scroll="" ng-init="getCarBookingDetails()">
+<div class="row carside" style="position: absolute;">
+    <div class="col col-offset-50 set" >
+      <h4 style="text-align : center;">Car Speciality</h4>
+      <h5>- 8 Seater</h5>
+      <h5>- Full AC</h5>
+      <h5>- Air Bags (incl.)</h5>
+      <h5>- Fuel (incl.)</h5>
+      <h5>- Rs. 30/km</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img class="full-image" ng-src="img/cartype1.jpg" style="max-height: 202px;">
+    </div>
+  </div>
+ <div>
+  <div class="row" id="calendar-div">
+  <div class="col col-20" ><img src="img/calendar-line.png" class="calenLogo" align="center">
+    </div>
+    <div class="col" ><h5> {{ BookingDetails.startdatedisplay | date}}</h5><h5>{{ BookingDetails.startdatedisplay | date : 'EEEE'}}</h5><h5>{{ BookingDetails.selectedstartTime | date:'h:mma' : 'UTC' }}</h5></div>
+    <div class="col col-20"><img src="img/arrow-right.png" class="calenLogo" align="left"></div>
+    <div class="col" ><h5> {{ BookingDetails.enddatedisplay | date}}</h5><h5>{{ BookingDetails.enddatedisplay | date : 'EEEE'}}</h5><h5>{{ BookingDetails.selectedendTime | date:'h:mma' : 'UTC' }}</h5></div>
+</div>
+  <div class="item item-divider">
+    Choose a Payment Method
+  </div>
+  <div scroll="false" >
+    <ion-slide-box slide-tabs-scrollable="false" show-pager='false' does-continue="false" ion-slide-tabs on-slide-changed="slideHasChanged($index)"> 
+      <ion-slide ion-slide-tab-label='<input type="radio" ng-model="color.name" value="red"><span>Credit Card</span>'>
+        <article class="tab-content new_tabs" style="min-height: 300px">
+          <div class="row">
+            <div class="col">
+              <label class="item item-input">
+              <i class="icon ion-card placeholder-icon"></i>
+              <input type="number" placeholder="Card Number">
+              </label>
+            </div>
+          </div>  
+          <div class="row">
+              <div class="col">
+                <label class="item item-input">
+                  <input type="number" placeholder="Expiry Month" style="width: 20%;display: inline-block;">
+                  <input type="number" placeholder="Expiry Year" style="width: 20%;display: inline-block;">
+                  <input type="number" placeholder="CVV" style="width: 20%;display: inline-block;">
+                </label>
+              </div>
+          </div>
+        </article>
+      </ion-slide>
+      <ion-slide ion-slide-tab-label='<span>Debit Card</span>'>
+        <article class="tab-content new_tabs" style="min-height: 300px">
+           <div class="row">
+            <div class="col">
+              <label class="item item-input">
+              <i class="icon ion-card placeholder-icon"></i>
+              <input type="number" placeholder="Card Number">
+              </label>
+            </div>
+          </div>  
+          <div class="row">
+              <div class="col">
+                <label class="item item-input">
+                  <input type="number" placeholder="Expiry Month" style="width: 30%;display: inline-block;">
+                  <input type="number" placeholder="Expiry Year" style="width: 30%;display: inline-block;">
+                  <input type="number" placeholder="CVV" style="width: 30%;display: inline-block;">
+                </label>
+              </div>
+          </div>
+        </article>
+      </ion-slide>
+      <ion-slide ion-slide-tab-label='<span>Net Banking</span>'>
+      <ion-scroll style="height: 240px">
+          <article class="tab-content new_tabs" style="min-height: 300px" scroll="true">
+          <h3>Credit Card</h3>
+          </article>
+        </ion-scroll>
+      </ion-slide>
+    </ion-slide-box>
+</div>
+</ion-content>
+<ion-footer-bar align-title="center" keyboard-attach style="bottom:0px;height:12%;background-color: #F57722;text-align:center;">
+  <input type="submit" ng-if="tabActive===0" class="button button-full btn-yellow footerBTN" value="PROCEED" style="color:black;">
+  <input type="submit" ng-if="tabActive===1" class="button button-full btn-yellow footerBTN" value="PROCEED" style="color:black;">
+  <input type="submit" ng-if="tabActive===2" class="button button-full btn-yellow footerBTN" value="PROCEED" style="color:black;">
+</ion-footer-bar> -->

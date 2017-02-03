@@ -1,0 +1,137 @@
+<form name="authorizationForm" ng-submit="authorizationForm.$valid && carBooking(data)" novalidate>
+<ion-view cache-view="true" ng-init="init()">
+<ion-nav-title >
+      <img alt="Company Logo" height="45" ng-src="img/tigtagcar-logo.png">
+  </ion-nav-title>
+<ion-content class="has-footer"> 
+  <!-- <div class="row datetimecol" >
+    <div class="col" style="padding-left: 15px;">
+      <div class="list card" id="date-division" ng-click="startdate()">
+        <div class="item item-avatar">
+          <img src="img/Calendar-4-icon.png" style="border-radius : 0%;">
+          <h2>Start Date</h2>
+          <p>{{data.startdatedisplay | date}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="list card" id="date-division" ng-click="enddate()">
+        <div class="item item-avatar">
+          <img src="img/Calendar-4-icon.png" style="border-radius : 0%;">
+          <h2>End Date</h2>
+          <p>{{data.enddatedisplay | date}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row datetimecol">
+    <div class="col" style="padding-left: 15px;">
+      <div class="list card" id="date-division" ng-click="startdate()">
+        <div class="item item-avatar">
+          <img src="img/Calendar-4-icon.png" style="border-radius : 0%;">
+          <h2>Start Date</h2>
+          <p>{{data.startdatedisplay | date}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="list card" id="date-division" ng-click="enddate()">
+        <div class="item item-avatar">
+          <img src="img/Calendar-4-icon.png" style="border-radius : 0%;">
+          <h2>End Date</h2>
+          <p>{{data.enddatedisplay | date}}</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="row ">
+    <div class="col text-center">
+      <h3 class="dark ">{{data.flag}} : {{data.selectedCity}}</h3>
+    </div>
+  </div>
+  <div class="row datetimecol">
+    <div class="col text-center">
+      <div class="button button-light" id="date-division" ng-click="startdate()" >
+      <img src="img/calender.svg" class="ClockLogo" align="left">
+        &nbsp;Start Date <br> <span style="font-size: 12px;">{{data.startdatedisplay | date}}</span>
+      </div>
+    <input type="hidden" name="startdate" ng-model="data.startdatedisplay" required> 
+    <div class="row  assertive"  ng-messages="authorizationForm.$submitted && authorizationForm.startdate.$error" role="alert">
+    <div class="error-msg" ng-message="required">Select startdate.</div>
+    </div>
+    </div>
+    <div>
+      <img src="img/next-black.png" style="max-width: 21px;margin: 9px 0px 7px 0px;" align="left">
+    </div>
+    <div class="col text-center">
+      <div class="button button-light" ng-click="enddate()" id="date-division">
+       <img src="img/calender.svg" class="ClockLogo" align="left">
+        End Date <br> <span style="font-size: 12px;">{{data.enddatedisplay | date}}</span>
+       </div>
+    <input type="hidden" name="enddate" ng-model="data.enddatedisplay" required> 
+    <div class="row  assertive"  ng-messages="authorizationForm.$submitted && authorizationForm.enddate.$error" role="alert">
+    <div class="error-msg" ng-message="required">Select enddate.</div>
+    </div>
+    </div>
+  </div>
+  <div class="row datetimecol">
+    <div class="col text-center">
+      <div class="button button-light" ng-click="startTime()" id="time-division">
+      <img src="img/clock.svg" class="ClockLogo" align="left">
+        Pick-up <br> {{data.selectedstartTime | date:'h:mma' : 'UTC' }}
+      </div>
+        <input type="hidden" name="startTime" ng-model="data.selectedstartTime" required> 
+    <div class="row  assertive"  ng-messages="authorizationForm.$submitted && authorizationForm.startTime.$error" role="alert">
+    <div class="error-msg" ng-message="required">Select Start Time.</div>
+    </div>
+      </div>
+      <div class="col text-center">
+      <div class="button button-light" ng-click="endTime()" id="time-division">
+       <img src="img/clock.svg" class="ClockLogo" align="left">
+        Drop-off <br> {{data.selectedendTime | date:'h:mma' : 'UTC' }} 
+      </div>
+      <input type="hidden" name="endTime" ng-model="data.selectedendTime" required> 
+    <div class="row  assertive"  ng-messages="authorizationForm.$submitted && authorizationForm.endTime.$error" role="alert">
+    <div class="error-msg" ng-message="required">Select End Time.</div>
+    </div>
+    </div>
+  </div>
+  
+  <div class="row" id="input-age">
+    <div class="col col-75 text-center" >
+      <label class="item item-input" id="roundedCorner" ng-class="{ 'has-errors' : authorizationForm.username.$invalid, 'no-errors' : authorizationForm.username.$valid}">
+      <input  id="textarea-input" ng-model="data.age" name="dirverAge"  min="17"
+         max="70" required type="number" name="Driver's Age" placeholder="Driver's Age" required/>
+      </label>
+    </div>
+    <div class="col text-center" ><img src="img/info-icon-green.png" height="40px" width="40px" ng-click="showAlert()"></div>
+    </div>
+    <div class="row alertMargin assertive"  ng-messages="authorizationForm.$submitted && authorizationForm.dirverAge.$error" role="alert">
+    <div class="error-msg" ng-message="required">Enter Age.</div>
+    <div class="error-msg" ng-message="min">Age Should Grater Than 17.</div>
+    <div class="error-msg" ng-message="max">Age Should not more than 70.</div>
+    </div>
+     <div class="row" id="address-box">
+        <textarea id="roundedCorner" ng-model="data.address" type="text" name="Input_address" placeholder="Enter Address here" required></textarea> 
+      <!-- <input type="text" id="textarea-input"  ng-model="data.address"  name="Input address" placeholder="Enter Address here"> -->
+      </label>
+    </div>
+    <div class="row alertMargin assertive"  ng-messages="authorizationForm.$submitted && authorizationForm.Input_address.$error" role="alert">
+      <div class="error-msg" ng-message="required">Enter Address.</div>
+    </div>
+  <div class="row" id="input-onoff" >
+        <ion-toggle id="roundedCorner" type="toggle" ng-model="airplaneMode"  toggle-class="toggle-calm"><h3 id="textarea-input">Drop-off at the same location</h3></ion-toggle>
+  </div>
+  <div class="row"  ng-hide="airplaneMode" id="address-box">
+      <textarea   id="roundedCorner" ng-model="data.addressSecond" ng-disabled="airplaneMode" type="text" class="dark" name="Driver's Age" placeholder="Some address here(will be visible only when the above switch is off)"></textarea>
+    </label>
+  </div>
+ </ion-content>
+ <ion-footer-bar class="hide-on-keyboard-open" align-title="center" style="height: 60px;background-color: #5c7e0e;text-align:center;">
+         <input type="submit" class="button button-full btn-yellow footerBTN" value="To The Car List">
+         <!-- <button class="button button-full btn-yellow footerBTN" ng-click="authorizationForm.$valid && carBooking(data)" type="submit" > 
+         Submit
+        </button> -->
+    </ion-footer-bar>
+</ion-view>
+</form>

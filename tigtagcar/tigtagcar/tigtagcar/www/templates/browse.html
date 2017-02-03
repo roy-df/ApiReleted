@@ -1,0 +1,48 @@
+<ion-view ng-controller="AppCtrl" ng-init="IsClickEnable=true">
+  <ion-nav-title>
+  <img alt="Company Logo" height="45" ng-src="img/tigtagcar-logo.png">
+  </ion-nav-title>
+  <ion-content ng-init="init();getCities();" scroll="false">
+    <div id="dropdownbox" class="list">
+    <!-- <label class="item item-input item-select item-dark" >
+    <div class="input-label">
+    Choose city
+    </div>
+    <select ng-model="selectedCityModel" ng-options="c.city for c in cities"></select>
+    </label> -->
+      <select class="ion-input-select" ng-model="selectedCityModel" ng-options="c.city for c in cities" ng-change="errmsg()"></select>
+      <div class="row assertive" ng-if="errMSg" role="alert">
+        {{errMSg}}
+      </div>
+    </div>
+    <div class="steering-img-div1 row" ng-click="IsClickEnable && gotoCarBooking('In Your City',selectedCityModel.city);rotate()">
+      <div class="col">
+        <div class="" ng-class="{'animated2 slideOutRight' : animate1}" >
+          <img src="img/car.svg" height="80" width="80" align="left" />
+        </div>
+      </div>
+      <div class="col col-75" > <h3  id="steering-right-text" class="dark">In Your City</h3></div>
+    </div>
+    <div class="steering-img-div1 row" ng-click="IsClickEnable && gotoCarBooking('Outside Your City',selectedCityModel.city)">
+      <!--     <div class="steering-img-div1 row" ng-click="gotoCarBooking('In Your City',selectedCityModel.city)" ui-sref="app.car-booking({flag: 'Outside Your City',selectedCity : selectedCityModel.city})"> -->
+      <div class="col">
+        <div class="" ng-class="{'animated2 slideOutRight ' : animate0}" >
+          <img src="img/car.svg" height="80" width="80" align="left" />
+        </div>
+      </div>
+      <div class="col col-75 ">
+        <h3 id="steering-right-text" class="dark">Outside Your City</h3>
+      </div>
+    </div>
+    <div class="steering-img-div1 row" ng-click="IsClickEnable && gotoCarBooking('Special Events',selectedCityModel.city);">
+      <div class="col">
+        <div class="" ng-class="{'animated2 slideOutRight' : animate}" >
+          <img src="img/car.svg" height="80" width="80" align="left" />
+        </div>
+      </div>
+      <div class="col col-75">
+        <h3 id="steering-right-text" class="dark">Special Events</h3>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

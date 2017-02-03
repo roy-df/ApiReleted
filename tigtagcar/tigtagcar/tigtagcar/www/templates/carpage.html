@@ -1,0 +1,58 @@
+<ion-view id="tabpage" ng-init="getCarBookingDetails();getCar();" >
+  <ion-header-bar class="bar bar-subheader">
+      <div class="list" style="width: 100%;">
+        <div class="row item" style="border-color: #252525;background-color: #252525;">
+          <div class="col" style="text-align: center;" ui-sref="app.dateEdit">
+
+              <h2 style="color: white;font-size: 12px; margin:-10px 0 3px 0;" align="center">Pick-up</h2>
+            <p style="color: white;font-size: 12px;">{{ BookingDetails.startdatedisplay | date}}&nbsp;&nbsp;<!-- <i class ="icon ion-arrow-right-c" style="font-size: 15px;"></span></i> -->&nbsp;&nbsp;{{ BookingDetails.selectedstartTime | date:'h:mma' : 'UTC' }}</p>
+          </div>
+          <div>
+          <div class="col-20" style="color: white;"><i class ="icon ion-ios-arrow-right" style="font-size: 30px;"></i></div>
+          </div>
+          <div class="col" style="text-align: center;" ui-sref="app.dateEdit">
+          <h2 style="color: white;font-size: 12px; margin:-10px 0 3px 0;" align="center">Drop-off</h2>
+            <p style="color: white;font-size: 12px;">{{ BookingDetails.enddatedisplay | date}}&nbsp;&nbsp;<!-- <i class ="icon ion-arrow-right-c" style="font-size: 15px;"></i> -->&nbsp;&nbsp;{{ BookingDetails.selectedendTime | date:'h:mma' : 'UTC' }}</p>
+            <!-- <h3>Drop-off&nbsp;{{ BookingDetails.enddatedisplay | date : 'EEEE'}}</h3>
+            <p>{{ BookingDetails.enddatedisplay | date}}&nbsp;{{ BookingDetails.selectedendTime | date:'h:mma' : 'UTC' }}</div></p> -->
+          </div>
+        </div>
+  </div>
+  </ion-header-bar>
+  <ion-content class="stripedTabs" scroll="false" ng-init="getCities()">
+    <ion-tabs class="tabs-striped tabs-top tabs-dark tabs-icon-top">
+      <ion-tab title="Hatchback" icon="hatchback" ui-sref="app.carpage.cartype1" on-select="main.onTabSelected(this)">
+        <ion-nav-view name="app-carpage-cartype1" ></ion-nav-view>
+      </ion-tab>
+      <ion-tab title="Sedan" icon="sedan" ui-sref="app.carpage.cartype2">
+    
+        <ion-nav-view name="app-carpage-cartype2"></ion-nav-view>
+      </ion-tab>
+      <ion-tab title="MUV" icon="muv" ui-sref="app.carpage.cartype3">
+    
+        <ion-nav-view name="app-carpage-cartype3"></ion-nav-view>
+      </ion-tab>
+      <ion-tab title="SUV" icon="suv" ui-sref="app.carpage.cartype4">
+        <ion-nav-view name="app-carpage-cartype4"></ion-nav-view>
+      </ion-tab>
+    </ion-tabs>
+  </ion-content>
+</ion-view>
+ <!-- <ion-view ng-init="getCities()">
+  <ion-nav-title>
+      <img alt="Company Logo" height="45" ng-src="img/logo-design-14-v5.jpg">
+  </ion-nav-title>
+  <ion-content style="top: 50px;" >
+    <div class="button-bar">
+            <div class="button-bar">
+                <a class="button" style="margin: 10px;" tab-state ui-sref="app.carpage.cartype1">Hatchback</a>
+                <a class="button" style="margin: 10px;" tab-state ui-sref="app.carpage.cartype2">Sedan</a>
+                <a class="button" style="margin: 10px;" tab-state ui-sref="app.carpage.cartype3">MUV</a>
+                <a class="button" style="margin: 10px;" tab-state ui-sref="app.carpage.cartype4">SUV</a>
+            </div>
+        </div>
+  </ion-content>
+  <ion-footer-bar align-title="center">
+         <button class="button button-full" id="roundedCorner" type="submit" ng-click="publish()">PUBLISH</button>
+     </ion-footer-bar>  
+</ion-view> -->

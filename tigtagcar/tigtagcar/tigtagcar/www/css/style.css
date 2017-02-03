@@ -1,0 +1,614 @@
+/* Empty. Add your own CSS if you like */
+/* Empty. Add your own CSS if you like */
+
+ .background-image {
+    background-image: url(../img/tigtagcars-bg-darkened.jpg);  
+     background-size: cover;
+    background-position: 40% 0;
+    opacity:0.8;
+   
+}
+
+
+
+.steering-img-div1 {
+	/*margin-top:20%;
+    height: 5%;
+    margin-left:15%;*/
+    width:100%;
+    padding-left: 15%
+/*    margin: 0px 0 17px 26px;*/
+}
+
+#steering-right-text{
+	margin-left: 10px;
+	font-size: 20px;
+	padding-top: 26px;
+}
+
+#dropdownbox{
+
+	margin-top:30%;
+	padding-left:8%;
+	padding-right:8%;
+}
+
+#dropdownbox1{
+    margin-top:8%;
+    padding-left:8%;
+    padding-right:8%;
+}
+
+.input-label{
+	opacity:0.3;
+	font-style: bold;
+}
+
+#date-division{
+	width:95%;
+	/*margin-top: 25%;*/
+	margin-left:0%;
+	border: solid 1px #555; 
+    background-color: ; 
+    box-shadow: 0px -3px 	#592a35;
+    border-radius:8px; 
+}
+#date-division2{
+     width:35%;
+	margin-top: 20%;
+	margin-left:10%;
+	border: solid 1px #555; 
+    background-color: ; 
+    box-shadow: 0px -3px 	#5c7e0e;
+   border-radius:8px; 
+
+}
+
+#time-division{
+    /*height:90px;*/
+    width: 95%;
+	margin-top: 10%;
+	margin-left:0%;
+	border: solid 1px #555; 
+    background-color: ; 
+    box-shadow: 0px -3px 	#592a35;
+    border-radius:8px; }
+
+#input-age{
+	margin-top:5%;
+	/*padding-right:5%;*/
+	padding-left: 4%;
+}
+#roundedCorner { 
+	width: 100%;
+    border: solid 1px #555; 
+    background-color: ; 
+    box-shadow: 0px -3px 	#592a35;
+    border-radius:8px; 
+} 
+#input-onoff{
+	margin-top:10%;
+	padding-right:4%;
+	padding-left: 5%;
+}
+
+#address-box textarea{
+	width: 100%;
+	height: 70px;
+	margin-top:10%;
+	margin-left: 4%;
+	margin-right: 4%;
+	padding: 14px;
+}
+
+#submit-button{
+      height:10%;
+	margin-top:10%;
+	padding-right:4%;
+	padding-left: 5%;
+    color: #5c7e0e;
+}
+
+.ClockLogo{
+    width: 30px;
+    margin: 7px 0 7px 0px;
+}
+
+.calenLogo{
+    max-width: 20px;
+    margin: 20px 0px 7px 10px
+}
+
+	.ionic_datepicker_popup .popup-body .selected_date_full {
+    	background-color: #5c7e0e !important;
+    }
+
+    .ionic_datepicker_popup .popup-buttons button {
+    	background-color: #5c7e0e !important;
+   	}
+
+    .ionic_timepicker_popup .heading {
+      background-color: #5c7e0e !important;
+    }
+
+    .ionic_timepicker_popup .button_set, .ionic_timepicker_popup .button_close {
+        background-color: #5c7e0e !important;
+    }
+
+    .ionic_datepicker_popup .popup-body .button-clear {
+        color: #5c7e0e !important ;
+    }
+
+    .ionic_datepicker_popup .today {
+        border: 1px solid #5c7e0e !important;
+    }
+
+    .ionic_datepicker_popup .selected_date {
+        background-color: #5c7e0e !important;
+    }
+
+    .ionic_datepicker_popup .popup-body .month_select:after, .ionic_datepicker_popup .popup-body .year_select:after {
+        color: #5c7e0e !important;
+    }
+
+    .ionic_datepicker_popup .popup-body .month_select, .ionic_datepicker_popup .popup-body .year_select {
+        border-bottom: 1px solid #5c7e0e !important;
+    }
+
+    .button.button-positive {
+        background-color: #5c7e0e !important;
+    }
+
+   	.tabs-top > .tabs, .tabs.tabs-top {
+	    top: 0px !important;
+	}
+
+	.bar-footer {
+    	bottom: 0px;
+	}
+.has-header {
+    top: 45px;
+}
+
+.has-footer {
+   bottom: 61px;
+}
+
+#roundedCorner::-webkit-input-placeholder
+{
+  color:black;
+ 
+}
+
+.form-validate.ng-invalid {
+    border: 3px solid #cc2511;
+}
+.form-validate.ng-valid {
+    border: none;
+}
+
+    
+.stripedTabs .tabs-striped.tabs-dark .tabs {
+    background-color: rgba(255, 255, 255, 0.03) !important; 
+    font-size: 24px;
+}   
+
+.stripedTabs .tabs-striped.tabs-dark .tab-item.tab-item-active, .stripedTabs .tabs-striped.tabs-dark .tab-item.active, .stripedTabs .tabs-striped.tabs-dark .tab-item.activated {
+    color: #ffffff;
+    margin-top: -10px !important;
+    background: #5c7e0e;
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    border-color: #5c7e0e;
+    box-shadow: 10px 10px 5px #888888;
+ }
+
+
+
+.stripedTabs .tabs-striped.tabs-dark .tab-item {
+    color: rgb(35, 39, 42);
+    opacity: 1;
+    margin: -10px 8px 0px 9px;
+    background: #D5D6D7;
+    height: 70px;
+    box-shadow: 10px 10px 5px #888888;
+ }
+
+.stripedTabs .tabs-striped .tabs {
+    background-color: white;
+    background-image: none;
+    border: none;
+    padding-top: 5%;
+}
+
+.stripedTabs .tab-item .suv {
+    background-image: url(../img/suv-cars.png);
+    background-repeat: no-repeat;
+    width: 87%;
+    height: 70%;
+    background-position:center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+    background-size: cover;
+}
+
+.stripedTabs .tab-item.tab-item-active .suv, .stripedTabs .tab-item.tab-item-activated .suv {
+    background-image: url(../img/suv-cars-white.png);
+    background-repeat: no-repeat;
+    width: 87%;
+    height: 70%;
+    background-position:center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+    background-size: cover;
+}
+
+.stripedTabs .tab-item .muv {
+    background-image: url(../img/muv-cars.png);
+    background-repeat: no-repeat;
+    width: 87%;
+    height: 70%;
+    background-position:center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+    background-size: cover;
+}
+
+.stripedTabs .tab-item.tab-item-active .muv, .stripedTabs .tab-item.tab-item-activated .muv{
+    background-image: url(../img/muv-cars-white.png);
+    background-repeat: no-repeat;
+    width: 87%;
+    height: 70%;
+    background-position:center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+    background-size: cover;
+}
+
+
+ .stripedTabs .tab-item .sedan {
+    background-image: url(../img/sedans.png);
+    background-repeat: no-repeat;
+    width: 87%;
+    height: 70%;
+    background-position:center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+    background-size: cover;
+}   
+
+.stripedTabs .tab-item.tab-item-active .sedan, .stripedTabs .tab-item.tab-item-activated .sedan{
+    background-image: url(../img/sedans-white.png);
+    background-repeat: no-repeat;
+    width: 87%;
+    height: 70%;
+    background-position:center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+    background-size: cover;
+}
+
+.stripedTabs .tab-item .hatchback {
+    background-image: url(../img/hatchback-cars.png);
+    background-repeat: no-repeat;
+    width: 87%;
+    height: 70%;
+    background-position:center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}   
+
+.stripedTabs .tab-item.tab-item-active .hatchback, .stripedTabs .tab-item.tab-item-activated .hatchback{
+    background-image: url(../img/hatchback-cars-white.png);
+    background-repeat: no-repeat;
+    width: 87%;
+    height: 70%;
+    background-position:center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+    background-size: cover;
+}
+
+.stripedTabs .tabs-icon-top > .tabs .tab-item, .tabs-icon-top.tabs .tab-item, .tabs-icon-bottom > .tabs .tab-item, .tabs-icon-bottom.tabs .tab-item {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.carside {
+    position: absolute;
+    max-height: 42%;
+}
+
+.carside .set { 
+    background: rgba(45, 43, 43, 0.54);
+    padding: 5px 5px 0px 0px;
+}
+
+.carside .set1 { 
+    background: rgba(45, 43, 43, 0.54);
+}
+
+.carside1 {
+    position: absolute;
+    max-height: 42%;
+}
+
+.carside1 .set { 
+    background: rgba(45, 43, 43, 0.54);
+    padding: 2px 5px 0px 0px;
+}
+
+.carside1 .set1 { 
+    background: rgba(45, 43, 43, 0.54);
+}
+
+
+.carside h4,h5, .h4 {
+    padding: 0px 0px 0px 5px;
+    color: #FFF;
+}
+
+.carside h4, .h4{
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.carside  h5, .h5 {
+    margin-top: 0px;
+    margin-bottom: 9px;
+}
+
+.carside h2, .h2 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.carside1 h4,h5, .h4 .h5{
+    padding: 0px 0px 0px 5px;
+    color: #FFF;
+}
+
+.carside1 h4, .h4{
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.carside1  h5, .h5 {
+    margin-top: 0px;
+    margin-bottom: 9px;
+}
+
+.carside1 h2, .h2 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.full-image {
+    width: 100%;
+    max-height: 202px;
+}
+
+.button.button-full {
+    margin-bottom: 0px;
+    background-color: #5c7e0e;
+    width: 100%;
+}
+
+#calendar-div {
+    background-color: #252525;
+}
+
+.cardetails .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0px; 
+    width: 100%;
+}
+
+.cardetails .col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: block;
+     padding: 0px; 
+    width: 100%;
+}
+
+.alertMargin {
+    width: 70%;
+    margin-left: 4%;
+}
+
+#dropdownbox  select {
+    margin: 0px;
+    font-size: 100%;
+    font-family: inherit;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    -webkit-font-smoothing: inherit;
+    background-image: none;
+    padding: 7px;
+    width: 100%;
+    background: #ffffff;
+}
+#dropdownbox1  select {
+    margin: 0px;
+    font-size: 100%;
+    font-family: inherit;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    -webkit-font-smoothing: inherit;
+    background-image: none;
+    padding: 7px;
+    width: 100%;
+    background: #fafafa;
+}
+
+#dropdownbox select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: #111;
+    cursor: default;
+    border-bottom: 3px solid #5c7e0e;
+    /*border-width: 1px;
+    border-style: solid;
+    border-color: #444;*/
+}
+#dropdownbox1 select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #444;
+}
+
+.footerBTN { 
+    margin-top: 0px !important;
+    font-size: 22px !important;
+    color: #fff;
+}
+
+.popover {
+    height: 181px;
+}
+
+.platform-ios .popover {
+    border-radius: 10px 0px 10px 10px;
+}
+
+.platform-ios .popover-arrow {
+    top: -20px;
+    left: 193px !important;
+    width: 27px;
+    height: 24px;
+}
+
+.bar-subheader {
+    top: 44px;
+    height: 55px;
+}
+
+.has-subheader {
+    top: 100px;
+}
+
+#tabpage .bar{
+    background-color:  #252525;
+}
+
+.rotate {
+   -webkit-transform: rotate(360deg);  
+}
+.rotateCounterwise {
+    -webkit-transform: rotate(0deg);
+    
+}
+
+.bar.bar-dark {
+    border-color:  #5c7e0e;
+    background-color:  #5c7e0e;
+}
+
+.item-select select
+{
+    
+    padding: 13px 45px 15px 0px;
+    direction: ltr;
+}
+.datetimecol .button {
+    line-height: 25px;
+}
+
+.keyboard-open .has-footer {
+    bottom: 0;
+}
+
+.toggle-small .toggle-calm input:checked + .track {
+    background-color: rgba(92, 126, 14, 0.6);
+}
+
+.toggle-small .toggle-calm input:checked + .track .handle {
+    background-color: #5c7e0e;
+}
+
+.Aligner {
+    display: flex;
+    align-items: center;
+    min-height: 24em;
+    justify-content: center;
+    margin: 30% 0% 0% 0%;
+    background: #bdcc9b;
+    border-radius: 50%;
+}
+
+.nointernetIMG { 
+    
+    -webkit-transform: rotate(160deg);
+    -moz-transform: rotate(160deg);
+    -o-transform: rotate(160deg);
+    transform: rotate(160deg);
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    right: 35%;
+} 
+
+.Aligner-item {
+  flex: 1;
+  text-align: center;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+
+.Aligner-item--fixed {
+  flex: none;
+  max-width: 75%;
+}
+
+.Aligner-item--fixed p{
+  font-size: 10px;
+  text-align: center;
+  margin: 0px;
+}

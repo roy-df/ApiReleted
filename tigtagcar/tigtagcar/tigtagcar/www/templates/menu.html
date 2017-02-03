@@ -1,0 +1,223 @@
+<ion-side-menus enable-menu-with-back-views="true" ng-init="init()">
+    <ion-side-menu-content hide-back-button="true">
+        <!--   <ion-side-menus enable-menu-with-back-views="false">
+          <ion-side-menu-content hide-back-button="false"> -->
+        <ion-nav-bar class="bar-dark" align-title="center">
+            <!--          <ion-nav-back-button>
+                  </ion-nav-back-button>
+                  <ion-nav-buttons side="left">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                    </button>
+                  </ion-nav-buttons>
+                  -->
+            <ion-nav-back-button default-nav-back-button ng-click="customBack()">
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button ng-if="!$root.showMenuButton" class="button button-icon button-clear ion-navicon-round" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent">
+            <ion-view>
+                <ion-nav-title>
+                    <img alt="Company Logo" height="45" ng-src="img/tigtagcar-logo.png"/>
+                </ion-nav-title>
+            </ion-view>
+        </ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar header-side">
+            <ion-item class="item item-avatar" ng-if="!islogin" ui-sref="app.profile">
+                <label class="title">
+                    TigtagCar
+                </label>
+            </ion-item>
+            <ion-item class="item item-avatar" menu-close ui-sref="app.profile" ng-if="islogin" style="background: -webkit-linear-gradient(top, rgba(134, 122, 122, 0.380392) 0%,rgba(134, 122, 122, 0.380392) 100%), url({{islogin.profileimage}}) repeat 0 0;background-size: cover;background-position:center">
+                <!-- <img src="img/logo-design-14-v5.jpg"/> -->
+                <img ng-src="{{islogin.profileimage}}"/>
+                <h2>
+                    {{islogin.firstname}}&nbsp;{{islogin.lastname}}
+                </h2>
+                <p>
+                    {{islogin.user_email}}
+                </p>
+            </ion-item>
+        </ion-header-bar>
+        <ion-content scroll="false" class="leftmenu-list">
+            <ion-list>
+                <ion-item menu-close ng-click="" class="item-menu">
+                    <div class="row" ui-sref="app.my-booking">
+                        <div class="col">
+                            <button class="button circle text-center" align="center">
+                                <i class="ion-android-car">
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col col-75">
+                            <p style="">
+                                My Booking
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item menu-close  class="item-menu">
+                    <div class="row" ui-sref="app.offers-deals">
+                        <div class="col">
+                            <button class="button circle text-center">
+                                <i class="ion-pricetags">
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col col-75">
+                            <p>
+                                Offers and Deals
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item menu-close ng-click="" class="item-menu">
+                    <div class="row" ui-sref="app.invite">
+                        <div class="col">
+                            <button class="button circle text-center">
+                                <i class=" ion-person-stalker">
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col col-75">
+                            <p>
+                                Invite and Earn
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item menu-close class="item-menu">
+                    <div class="row">
+                        <div class="col">
+                            <button class="button circle text-center">
+                                <i class="ion-briefcase">
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col col-75">
+                            <p>
+                                Commute
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item menu-close  class="item-menu">
+                    <div class="row">
+                        <div class="col">
+                            <button class="button circle text-center">
+                                <i class=" ion-person-stalker">
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col col-75">
+                            <p>
+                                Cars and Tariffs
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item menu-close ng-click="" class="item-menu">
+                    <div class="row" ui-sref="app.policy">
+                        <div class="col">
+                            <button class="button circle text-center">
+                                <i class="ion-document-text">
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col col-75">
+                            <p>
+                                Policies
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item menu-close  class="item-menu">
+                    <div class="row" ui-sref="app.contactus">
+                        <div class="col">
+                            <button class="button circle text-center">
+                                <i class=" ion-android-call">
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col col-75">
+                            <p>
+                                Contact Us
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item menu-close  class="item-menu">
+                    <div class="row" ui-sref="app.carpage">
+                        <div class="col">
+                            <button class="button circle text-center">
+                                <i class="ion-social-buffer">
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col col-75">
+                            <p>
+                                CarList
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item menu-close ng-click="" class="item-menu" ng-if="!islogin">
+                    <div class="row" ui-sref="app.login">
+                        <div class="col">
+                            <button class="button circle text-center">
+                                <i class="ion-locked">
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col col-75">
+                            <p>
+                                Login
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item ng-click="logout()" class="item-menu" ng-if="islogin">
+                    <div class="row">
+                        <div class="col">
+                            <button class="button circle text-center">
+                                <i class="ion-power">
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col col-75">
+                            <p>
+                                LogOut
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+        <div class="bar bar-footer " style="height:40px;">
+            <div class="title">
+                Version 1.0.1
+            </div>
+        </div>
+    </ion-side-menu>
+</ion-side-menus>
+<script id="my-popover.html" type="text/ng-template">
+  <ion-popover-view>
+    <ion-content>
+      <div class="list">
+      <a class="item">
+        Test1
+      </a>
+      <a class="item">
+        Test2   
+      </a>
+      <a class="item">
+        Test3
+      </a>
+      </div>
+    </ion-content>
+  </ion-popover-view>
+</script>
